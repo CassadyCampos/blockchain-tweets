@@ -14,7 +14,6 @@ contract UserStorage is BaseStorage {
 
 
     function createUser(bytes32 _username) public onlyController returns(uint) {
-        require(msg.sender == controllerAddr);
         profiles[++latestUserId] = Profile(latestUserId, _username);
         return latestUserId;
     }
