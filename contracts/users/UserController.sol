@@ -1,5 +1,7 @@
 pragma solidity ^0.8.11;
 
-contract UserController {
+import '../helpers/BaseController.sol';
+
+contract UserController is BaseController {
     
 }

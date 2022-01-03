@@ -1,5 +1,7 @@
 pragma solidity ^0.8.11;
 
-contract TweetController {
-    
+import '../helpers/BaseController.sol';
+
+contract TweetController is BaseController {
+
 }
