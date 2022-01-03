@@ -5,7 +5,6 @@ contract('users', () => {
         const storage = await UserStorage.deployed()
         const username = web3.utils.fromAscii("cassady")
         const tx = await storage.createUser(username);
-        // console.log(tx);
         assert.isOk(tx);
     })
 

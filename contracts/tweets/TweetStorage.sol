@@ -10,10 +10,12 @@ contract TweetStorage {
         uint postedAt;
     }
 
-    uint latestTweetId = 0;
+    uint latestTweetId = 1;
 
     function createTweet(uint _userId, string memory _text) public returns (uint) {
-        tweets[++latestTweetId] = Tweet(latestTweetId, _text, _userId, block.timestamp);
+        latestTweetId++;
+        require(latestTweetId > 0, 'must be greater than 0 id');
+        tweets[latestTweetId] = Tweet(latestTweetId, _text, _userId, block.timestamp);
 
         return latestTweetId;
     }
