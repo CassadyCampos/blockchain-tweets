@@ -25,8 +25,8 @@ export default class IndexPage extends React.Component {
 
     createUser = async () => {
         // const username = eth.utils.toAscii('cherry')
-        var result = await createUser("cherry");
-        console.log("user created: ", result);
+        var tx = await createUser("cherry");
+        console.log("user created: ", tx);
     }
 
     render() {

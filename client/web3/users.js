@@ -18,11 +18,11 @@ export const createUser = async (username) => {
     await ethereum.enable()
     const addresses = await eth.getAccounts()
     console.log("test");
-    const result2 = await eth.utils.asciiToHex("test");
-    console.log(result2);
-    console.log('test', eth.utils.asciiToHex("test"));
+    // const result2 = await eth.utils.asciiToHex("test");
+    // console.log(result2);
+    // console.log('tes22', eth.utils.asciiToHex("test"));
     const result = await controller.createUser(
-      eth.utils.asciiToHex(username),
+      "0x636865727279",
     {
       from: addresses[0],
     })
